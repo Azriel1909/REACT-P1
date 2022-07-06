@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/*PARTE C*/
+/*NOTA - Normalmente asignamos estilo que se aplican en general a la app.*/
+
+* {
+  /*Reiniciamos margin y padding a 0 porque los navegadores tienen hojas de estilo predeterminadas y asignan un padding y margin por defecto.*/
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+html,
+body {
+  font-size: 18px;
+  background-color: #0E0E0E;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  max-width: 940px;
+  font-size: 2.5em;
+  font-family: lato, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 40px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App {
+  min-height: 100vh; /*Se adapte a la altura del navegador*/
+  display: flex; /*Definir cómo se ubicaran los distintos elementos del contenedor*/
+  flex-wrap: wrap; /*Los otros elementos se adaptarán*/
+  align-items: center; /*Centrar Vertical*/
+  justify-content: center; /*Centrar Horizontalmente*/
+  text-align: center;
+}
+
+.contenedorPrincipal,
+h1 {
+  justify-content: center; /*Centrar Horizontalmente*/
+}
+
+.contenedorPrincipal {
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+}
+
+
+@media screen and (max-width: 800px){
+  .contenedorPrincipal{
+      width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    font-size: 1.5em;
   }
 }

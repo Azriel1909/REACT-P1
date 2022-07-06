@@ -1,0 +1,91 @@
+/*Personalizar componente*/
+/*Regla-1
+RECORDAR - Importar el archivo css en nuestro archivo .js del componente*/
+.contenedorDatoPrincipal {
+  width: 1000px;
+  height: 368px;
+  margin: 10px 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0288D1;
+  box-shadow: 0 3px 13px 1px black;
+  border-radius: 2em;
+}
+
+.imagenDato {
+  height: 60%;
+  padding-left: 3em;
+}
+
+.contenedorTextoDato {
+  text-align: center;
+  padding: 40px;
+  font-family: lato, sans-serif;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.nombreDato {
+  font-size: 1.3rem; /*Unidad relativa que toma el tamaño de letra del elemento raíz(root)*/
+}
+
+.subDato {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.descripcionDato {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/*RETO SUPERADO - EL PROYECTO 1 ES RESPONSIVE*/
+
+@media screen and (max-width: 1000px){
+  .contenedorDatoPrincipal{
+      width: 90%;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 1em;
+      padding-bottom: 2em;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+
+  }
+  .contenedorDatoPrincipal .contenedorTextoDato {
+    width: 90%;
+
+    }
+
+    .contenedorDatoPrincipal .imagenDato  {
+      display: block;
+      padding: 0;
+      max-block-size: 20%;
+      padding-top: 3em;
+      margin: 0;
+    }
+
+    .nombreDato,
+    .descripcionDato,
+    .subDato {
+      font-size: 1.0em;
+      line-height: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+  .contenedorDatoPrincipal .imagenDato{
+      display: none;
+    }
+    .nombreDato,
+    .descripcionDato,
+    .subDato {
+      font-size: 0.9em;
+      line-height: 1.0rem;
+    }
+}
